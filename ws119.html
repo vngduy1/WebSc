@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="ke2a04,ヴ ゴック ズイ" />
+    <title>関数代入，関数式，匿名関数，即時関数</title>
+  </head>
+  <body>
+    <!-- ws119.js を読み込むスクリプト -->
+    <script src="js/ws119.js"></script>
+
+    <!-- 関数の呼び出し順序 -->
+    <script>
+      // 関数kansuを「関数呼出」の引数で呼び出し
+      kansu("関数呼出");
+
+      // 関数dainyuを「関数代入」の引数で呼び出し
+      dainyu("関数代入");
+
+      // 関数sikiを「関数式」の引数で呼び出し
+      siki("関数式");
+
+      // 関数tokumeiを「匿名関数」の引数で呼び出し
+      tokumei("匿名関数");
+
+      // 即時関数の定義と実行
+      (function (k, d, s, t) {
+        // 関数kansuにkの引数を与えて呼び出し
+        kansu(k);
+
+        // 背景色とインデントを設定したdiv要素の開始タグ
+        document.write(
+          '<div style="background-color:#0cc; padding-left:3em;">'
+        );
+
+        // 関数dainyuにdの引数を与えて呼び出し
+        dainyu(d);
+
+        // dainyuにsikiを代入し、sと文字列を組み合わせて再度dainyuを呼び出し
+        dainyu = siki;
+        dainyu(s + "変数を" + d);
+
+        // 関数sikiにsの引数を与えて直接呼び出し
+        siki(s);
+
+        // 関数tokumeiにtの引数を与えて呼び出し
+        tokumei(t);
+
+        // div要素の終了タグ
+        document.write("</div>");
+      })("即時関数", "代入", "式", "匿名");
+    </script>
+  </body>
+</html>

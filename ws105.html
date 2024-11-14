@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="ke2a04,ヴ ゴック ズイ" />
+    <title>インラインスクリプト(javascript擬似プロトコル)(onclick)</title>
+  </head>
+  <body>
+    <h1>色々なJavaScriptの呼出し方と出力</h1>
+    <h2>インラインスクリプト</h2>
+    <h3>[javascript擬似プロトコル]を記述したa要素をクリック</h3>
+    <p>
+      <a href="javascript:alert('alert \n from javascript pseudo protocol.')">
+        →alert出力:</a
+      >
+    </p>
+    <p>
+      <a
+        href="javascript:document.write('write<br> method in javascript pseudo protocol.')"
+      >
+        →write出力:</a
+      >
+    </p>
+    <h3>[onclick属性]にコードを記述した要素をクリック</h3>
+    <p>
+      <span onclick="javascript:alert('alert<br> onclick') "> →alert出力:</span>
+    </p>
+    <p></p>
+      <span onclick="document.write('write \n method onclick') "> →write出力:</span>
+    </p>
+    <script>
+    </script>
+  </body>
+</html>

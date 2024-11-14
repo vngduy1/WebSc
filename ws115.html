@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="ke2a04,ヴ ゴック ズイ" />
+    <title>西暦干支変換（関数）</title>
+  </head>
+  <body>
+    <script src="./js/ws115.js"></script>
+
+    <script>
+      document.write("<p>");
+      for (let i = 4; i <= 64; i++) {
+        document.write(getEto(i) + " ");
+        if ((i - 3) % 12 == 0) {
+          document.write("<br>");
+        }
+      }
+      var nen = window.prompt(
+        "干支を調べます。 \n" +
+          "西歴で年を入力してください「（ただし半角で４以上の整数）",
+        4
+      );
+      let ret = getEto(nen);
+      if (!ret) {
+        document.write(
+          "<p>西歴" +
+            nen +
+            "年は, <span style='font-weight: bold;' >" +
+            ret +
+            "</span>年です</p>"
+        );
+      }
+    </script>
+  </body>
+</html>
